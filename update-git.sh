@@ -240,6 +240,9 @@ fi
 if [ $BARE_REPO -eq 0 ]; then
   git checkout $BRANCH
 fi
+
+./emancipate.sh
+
 if [ $PUSH_TO_GITHUB -eq 1 ]; then
   echo "Pushing branch $BRANCH to remote" >&2
   if [ $INCLUDE_BRANCHES -eq 1 ]; then
